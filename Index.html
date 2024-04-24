@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  
+  <title>Bo kyar tanut</title>
+  
+  <link rel="stylesheet " href="Bo-kyar-tanut.css">
+  
+</head>
+<body>
+  <h1 class='title'> Bo-Kyar-Tanut</h1>
+  <div class="button"
+    
+    > <button class="Bo"
+    onclick="
+    const computerMove = brainDead();
+    
+    let result = '';
+    if (computerMove === 'Bo')
+    {result = 'Tie';}
+    else if (computerMove === 'Kyar')
+    {result = 'You lost';}
+    else if (computerMove === 'Tanut')
+    {result = 'You win';}
+    
+    alert(`you pick Bo. Computer pick ${computerMove}.
+    ${result}`);
+    ">
+    Bo 🫡
+  </button>
+  
+  <button class="Kyar"
+    onclick="
+    
+    
+    const computerMove = brainDead();
+    
+    let result = '';
+    if (computerMove === 'Bo')
+    {result = 'You win';}
+    else if (computerMove === 'Kyar')
+    {result = 'Tie';}
+    else if (computerMove === 'Tanut')
+    {result = 'You lose';}
+    
+    alert(`you pick Kyar. Computer pick ${computerMove}.
+    ${result}`);
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    ">
+    Kyar 🐯
+  </button>
+  
+  <button class="Tanut"
+    onclick="
+    const computerMove = brainDead();
+    
+    let result = '';
+    if (computerMove === 'Bo')
+    {result = 'You lose';}
+    else if (computerMove === 'Kyar')
+    {result = 'You Win';}
+    else if (computerMove === 'Tanut')
+    {result = 'Tie';}
+    
+    alert(`you pick Tanut. Computer pick ${computerMove}.
+    ${result}`);
+    ">
+    Tanut
+    👉
+  </button></div>
+  
+  <h1 class="title">Roll a dice</h1>
+  <button class='dice'
+    onclick="
+    
+    const randomNumber = Math.random();
+    
+    let computerMove = '';
+    
+    if (randomNumber >= 0 && randomNumber < 1 / 6)
+      {computerMove = '1';}
+      else if (randomNumber >= 1 / 6 && randomNumber < 2 / 6)
+        {computerMove = '2';}
+        else if (randomNumber >= 2 / 6 && randomNumber < 3 / 6)
+          {computerMove = '3';}
+    if (randomNumber >= 3 / 6 && randomNumber < 4 / 6)
+      {computerMove = '4';}
+      else if (randomNumber >= 4 / 6 && randomNumber < 5 / 6)
+        {computerMove = '5';}
+        else if (randomNumber >= 5 / 6 && randomNumber < 1)
+          {computerMove = '6';}
+    console.log(computerMove);  
+    alert(`your number is ${computerMove}`);
+    ">
+    Dice
+  </button>
+  
+  <script>
+  function brainDead() {
+      const randomNumber = Math.random();
+    
+    let computerMove = '';
+    
+    if (randomNumber >= 0 && randomNumber < 1 / 3)
+      {computerMove = 'Bo';}
+      else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3)
+        {computerMove = 'Kyar';}
+        else if (randomNumber >= 2 / 3 && randomNumber < 1)
+          {computerMove = 'Tanut';}
+    
+    return computerMove;
+    
+    
+  }  
+  </script>
+  
+  
+  
+  
+</body>
+</html>
